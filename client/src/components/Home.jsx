@@ -71,7 +71,7 @@ class Home extends Component {
       sortByDate: false,
     });
   }
-// refreshes listed events after new Q is submitted
+// refreshes listed events after new Q is submitted or deleted
   handleCreateQ() {
     this.getQsFromDB();
   }
@@ -107,6 +107,7 @@ class Home extends Component {
           sortByAmount={this.state.sortByAmount}
           filterUserQs={this.state.filterUserQs}
           userId={this.props.userId}
+          handleRemove={this.handleCreateQ}
         />
       </div>
     );
